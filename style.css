@@ -1,0 +1,39 @@
+div.highway-slider {display: flex;justify-content: center;width: 100%;}
+div.highway-slider div.highway-barrier {overflow: hidden;position: relative;}
+div.highway-slider ul.highway-lane {display: flex;height: 100%;}
+div.highway-slider ul.highway-lane li.highway-car {flex: 1;display: flex;justify-content: center;align-items: center;background: #fff;color: #343434;}
+@-webkit-keyframes translatestf {
+  0% {transform: translateX(100%);}
+  100% {transform: translateX(-500%);}
+}
+@keyframes translatestf {
+  0% {transform: translateX(100%);
+  }
+  100% {transform: translateX(-500%);}
+}
+#stffull div.highway-barrier ul.highway-lane {width: 500%;}
+#stffull div.highway-barrier ul.highway-lane li.highway-car {-webkit-animation: translatestf 30s linear infinite;animation: translatestf 30s linear infinite;}
+#stffull div.highway-barrier ul.highway-lane li.highway-car h4 {font-size: 28px;}
+@-webkit-keyframes translateinfinite {
+  100% {transform: translateX(calc(-180px * 12));}
+}
+@keyframes translateinfinite {
+  100% {transform: translateX(calc(-180px * 16));}
+}
+#infinite div.highway-barrier {background: #fff;}
+#infinite div.highway-barrier::before,#infinite div.highway-barrier::after {content: " ";position: absolute;z-index: 9;width: 180px;height: 100%;}
+#infinite div.highway-barrier::before {top: 0;left: 0;}
+#infinite div.highway-barrier::after {top: 0;right: 0;}
+#infinite div.highway-barrier ul.highway-lane {width: calc(180px * 24);}
+#infinite div.highway-barrier ul.highway-lane li.highway-car {width: 180px;-webkit-animation: translateinfinite 25s linear infinite;animation: translateinfinite 25s linear infinite;}
+#infinite div.highway-barrier ul.highway-lane li.highway-car span.fab {font-size: 65px;}
+.smooth_content{border-radius: 16px;}
+.smooth_content.one {background: #000;padding: 30px;margin: 20px 10px;color: #fff;}
+.smooth_content.two {background: #e6e6e6;padding: 30px;margin: 20px 10px;}
+.top_left {text-align: left;width: 50%;}
+.top_items{display: flex;}
+.top_right {text-align: right;width: 50%;}
+.top_right i{transform: rotate(-45deg);font-size: 25px;}
+li.highway-car:hover {transform: translateY(-10px);transition-duration: .10s;}
+li.highway-car {transition-duration: .6s;transition-property: transform;transition-timing-function: ease-out;}
+.highway-car:hover .top_right i{transform: rotate(0deg);}
